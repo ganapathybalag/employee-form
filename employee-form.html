@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="flex flex-col items-center justify-center mb-8 min-h-screen ">
+        <div class="w-full p-8 bg-red rounded-lg shadow-lg bg-red-100 mb-8">
+            <h2 class="mb-6 text-2xl font-bold text-red-800">EMPLOYEE FORM</h2>
+            <form class="space-y-4" id="myForm" novalidate>
+
+                <!--Name-->
+                <div>
+                    <label for="name" class="block text-lg font-medium text-pink-700"> EMPLOYEE NAME</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your Name"
+                        class="w-full px-4 py-2 mt-2 border border-pink-300 rounded-lg focus:border-pink-500" />
+                </div>
+                <!--Employee id-->
+                <div>
+                    <label for="Employee id" class="block text-sm font-medium text-pink-700"> EMPLOYEE ID</label>
+                    <input type="employee id" id="employee id" name="employee id" placeholder="Enter your id"
+                        class="w-full px-4 py-2 mt-1 border border-pink-300 rounded-lg focus:border-pink-500" />
+                </div>
+                <!--Employee age-->
+                <div>
+                    <label for="Employee age" class="block text-medium font-medium text-pink-700">EMPLOYEE AGE</label>
+                    <input type="number" id="employee age" name="employee age" placeholder="Enter your age"
+                        class="w-full px-4 py-2 mt-1 border border-pink-300 rounded-lg focus:border-pink-500" />
+                </div>
+                <!--Gender-->
+                <div>
+                    <label class="block text-lg font-medium text-pink-700">Gender</label>
+                    <div class="flex items-center mt-1 space-x-4">
+                        <label class="flex items-center">
+                            <input type="radio" name="gender" checked value="male"
+                                class="w-4 h-4 text-pink-600 border-pink-300 focus:ring-pink-500" />
+                            <span class="ml-2 text-gray-700">Male</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="gender" value="female"
+                                class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500" />
+                            <span class="ml-2 text-gray-700">Female</span>
+                        </label>
+                    </div>
+                </div>
+                <!--Educational qualification-->
+                <div>
+                    <label for="Educational qualification"
+                        class="block text-medium font-medium text-pink-700">EDUCATIONAL QUALIFICATION</label>
+                    <input type="text" id="Educational qualification" name="Educational qualification"
+                        placeholder="Enter your qualification"
+                        class="w-full px-4 py-2 mt-1 border border-pink-300 rounded-lg focus:border-pink-500" />
+                </div>
+                <!--salary-->
+                <div>
+                    <label for="Employee salary" class="block text-medium font-medium text-pink-700">EMPLOYEE SALARY</label>
+                    <input type="number" id="Employee salary" name="employee salary" placeholder="Enter salary"
+                        class="w-full px-4 py-2 mt-1 border border-pink-300 rounded-lg focus:border-pink-500" />
+                </div>
+                <!--esi-->
+                <div>
+                    <label for="Esi" class="block text-medium font-medium text-pink-700">ESI</label>
+                    <input type="esi" id="esi" name="esi" placeholder="Enter Esi"
+                        class="w-full px-4 py-2 mt-1 border border-pink-300 rounded-lg focus:border-pink-500" />
+                </div>
+                <!--pf-->
+                <div>
+                    <label for="pf" class="block text-medium font-medium text-pink-700">PF</label>
+                    <input type="pf" id="pf" name="pf" placeholder="Enter pf"
+                        class="w-full px-4 py-2 mt-1 border border-pink-300 rounded-lg focus:border-pink-500" />
+                </div>
+                <!--bonus-->
+                <div>
+                    <label for="bonus" class="block text-medium font-medium text-pink-700">BONUS</label>
+                    <input type="bonus" id="bonus" name="bonus" placeholder="bonus"
+                        class="w-full px-4 py-2 mt-1 border border-pink-300 rounded-lg focus:border-pink-500" />
+                </div>
+                <!--phone no-->
+                <div>
+                    <label for="contact no" class="block text-medium font-medium text-pink-700">CONTACT NO</label>
+                    <input type="tel" id="contact no" name="contact no" placeholder="Enter your contact no"
+                        class="w-full px-4 py-2 mt-1 border border-pink-300 rounded-lg focus:border-pink-500" />
+                </div>
+                <!--submit-->
+                <div>
+                    <button type="submit" id="submitBtn" onclick="formSubmit(event)"
+                        class="w-full px-2 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="w-full p-8 rounded-lg shadow-lg">
+            <table class="table-fixed border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="p-2 border border-gray-300 text-left text-sm font-medium text-gray-700">S.No</th>
+                        <th class="p-2 border border-gray-300 text-left text-sm font-medium text-gray-700">EMPLOYEE NAME</th>
+                        <th class="p-2 border border-gray-300 text-left text-sm font-medium text-gray-700">EMPLOYEE ID</th>
+                        <th class="p-2 border border-gray-300 text-left text-sm font-medium text-gray-700">EMPLOYEE AGE</th>
+                        <th class="p-2 border border-gray-300 text-left text-sm font-medium text-gray-700">GENDER</th>
+                        <th class="p-2 border border-gray-300 text-left text-sm font-medium text-gray-700">EDUCATIONAL QUALIFICATION</th>
+                        <th class="p-2 border border-gray-300 text-left text-sm font-medium text-gray-700">EMPLOYEE SALARY</th>
+                        <th class="p-2 border border-gray-300 text-left text-sm font-medium text-gray-700">ESI</th>
+                        <th class="p-2 border border-gray-300 text-left text-sm font-medium text-gray-700">PF</th>
+                        <th class="p-2 border border-gray-300 text-left text-sm font-medium text-gray-700">BONUS</th>
+                        <th class="p-2 border border-gray-300 text-left text-sm font-medium text-gray-700">CONTACT NO</th>
+                        <th class="p-2 border border-gray-300 text-left text-sm font-medium text-gray-700">ACTION</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="./scripts/employee-form.js"></script>
+</body>
+</html>
